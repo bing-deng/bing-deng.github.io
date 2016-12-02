@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>cocoapods使用 | dengbb的技术博客</title>
+  <title>mongodb与mongoose的使用 | dengbb的技术博客</title>
   <meta name="description" content="小贝贝斯手" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -44,18 +44,38 @@
 <main class="content" role="main">
   <article class="post">
     <span class="post-meta">
-      <time datetime="2016-11-28T03:32:25.000Z" itemprop="datePublished">
-          2016-11-28
+      <time datetime="2016-11-30T06:06:41.000Z" itemprop="datePublished">
+          2016-11-30
       </time>
     
 </span>
-    <h1 class="post-title">cocoapods使用</h1>
+    <h1 class="post-title">mongodb与mongoose的使用</h1>
     <section class="post-content">
-      <h1 id="cocoapods"><a href="#cocoapods" class="headerlink" title="cocoapods"></a><a href="https://cocoapods.org/" target="_blank" rel="external">cocoapods</a></h1><p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods</div></pre></td></tr></table></figure></p>
-<p>###创建podfile 文件时 官网推荐<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div><div class="line"></div><div class="line">target &apos;MyApp&apos; do</div><div class="line">  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;</div><div class="line">  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;</div><div class="line">end</div></pre></td></tr></table></figure></p>
-<p>否则会报错<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The dependency `FMDB (~&gt; 2.3)` is not used in any concrete target.</div></pre></td></tr></table></figure></p>
-<p>###或者另外一种写法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div><div class="line"></div><div class="line">def pods</div><div class="line">  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;</div><div class="line">  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;</div><div class="line">end</div><div class="line">target &apos;MyApp&apos; do</div><div class="line">  pods</div><div class="line">end</div></pre></td></tr></table></figure>
+      <ul>
+<li>hbase 和 redis 和 mongodb 和 couchdb 虽然都属于 nosql 的大范畴<ul>
+<li>hbase 是存海量数据的</li>
+<li>redis 用来做缓存</li>
+<li>而 mongodb 和 couchdb 则试图取代一些使用 mysql 的场景</li>
+</ul>
+</li>
+<li>在 sql 中，我们的数据层级是：数据库（db） -&gt; 表（table） -&gt; 记录（record）-&gt; 字段；</li>
+<li>在 mongodb 中，数据的层级是：数据库 -&gt; collection -&gt; document -&gt; 字段<ul>
+<li>其实这个文档就是 bson 的意思</li>
+<li>bson 是 json 的超集，比如 json 中没法储存二进制类型，而 bson 拓展了类型，提供了二进制支持。mongodb 中存储的一条条记录都可以用 bson 来表示。所以你也可以认为，mongodb 是个存 bson 数据的数据库，或是存哈希数据的数据库。</li>
+<li>在 mongodb 中，表与表之间是没有联系的，不像 sql 中一样，可以设定外键，可以进行表连接。mongodb 中，也无法支持事务。</li>
+<li>反正使用 mongodb 时，一定要思考的两点就是：表 join 到底要不要，事务支持到底要不要。</li>
+<li>mongodb 中，collection 是 schema-less 的。在 sql 中，我们需要用建表语句来表明数据应该具有的形式，而 mongodb 中，可以在同一张里存各种各样不同的形式的数据。同一个 collection 中，可以有些 document 具有 100 个字段，而另一些，则只具有 5 个字段。如果你分不清这个特性的使用场景，那么请像使用 sql 一样的，尽可能保证一个 collection 中数据格式是统一的。这个 schema-less 的特性，有个比较典型的场景是用来存储日志类型的数据，可以搜搜看这方面的典型场景</li>
+</ul>
+</li>
+</ul>
+<h2 id="安装-mongodb"><a href="#安装-mongodb" class="headerlink" title="安装 mongodb"></a>安装 mongodb</h2><ul>
+<li><p>ubuntu: <a href="http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/" target="_blank" rel="external">http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/</a></p>
+</li>
+<li><p>mac: $ brew install mongodb</p>
+</li>
+<li>装好以后，在命令行 $ mongod，然后另外开个 shell 窗口，输入 $ mongo 就能使用了。</li>
+</ul>
+<p><a href="https://github.com/alsotang/node-lessons/tree/master/lesson15" target="_blank" rel="external">参考</a></p>
 
     </section>
     <footer class="post-footer">
@@ -65,18 +85,18 @@
 </section>
       <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/11/28/cocoapods使用/" target="_blank">
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/11/30/mongodb与mongoose的使用/" target="_blank">
         <span class="hidden">weibo</span>
     </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/11/30/mongodb与mongoose的使用/"
        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/30/mongodb与mongoose的使用/"
        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/30/mongodb与mongoose的使用/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
@@ -86,14 +106,14 @@
   </article>
   <nav class="pagination" role="pagination">
     
-    <a class="newer-posts" href="/2016/11/28/React-Native-安装（Mac）/">
-        ← React Native 安装（Mac）
+    <a class="newer-posts" href="/2016/11/30/快捷键/">
+        ← 快捷键
     </a>
     
     <span class="icon-logo">•</span>
     
-    <a class="older-posts" href="/2016/11/28/javaScript框架/">
-        javaScript框架 →
+    <a class="older-posts" href="/2016/11/30/node-一日游/">
+        node 一日游 →
     </a>
     
 </nav>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>node 一日游 | dengbb的技术博客</title>
+  <meta name="description" content="小贝贝斯手" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="dengbb的技术博客">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">dengbb的技术博客</h1>
+            <h2 class="blog-description">小贝贝斯手<button id="showMenu">Show Menu</button></h2>
+        </div>
+    </div>
+</header>
+
+      
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2016-11-30T02:26:49.000Z" itemprop="datePublished">
+          2016-11-30
+      </time>
+    
+</span>
+    <h1 class="post-title">node 一日游</h1>
+    <section class="post-content">
+      <ul>
+<li><a href="http://npm.taobao.org/" target="_blank" rel="external">淘宝 NPM 镜像</a> 安装cnpm 与 npm 只差一个publis 命令</li>
+</ul>
+<h1 id="lesson1-中文版"><a href="#lesson1-中文版" class="headerlink" title="lesson1  中文版"></a><a href="http://expressjs.com/en/starter/installing.html" target="_blank" rel="external">lesson1</a>  <a href="https://github.com/alsotang/node-lessons/tree/master/lesson1" target="_blank" rel="external">中文版</a></h1><ul>
+<li><p>项目搭建命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ mkdir myapp</div><div class="line">$ cd myapp</div><div class="line">$ npm init</div><div class="line">$ npm install express --save or $ npm install express</div><div class="line">or 使用国内</div><div class="line">$ npm install express --registry=https://registry.npm.taobao.org</div></pre></td></tr></table></figure>
+</li>
+<li><p>app.js文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">// 这句的意思就是引入 `express` 模块，并将它赋予 `express` 这个变量等待使用。</div><div class="line">var express = require(&apos;express&apos;);</div><div class="line">// 调用 express 实例，它是一个函数，不带参数调用时，会返回一个 express 实例，将这个变量赋予 app 变量。</div><div class="line">var app = express();</div><div class="line"></div><div class="line">// app 本身有很多方法，其中包括最常用的 get、post、put/patch、delete，在这里我们调用其中的 get 方法，为我们的 `/` 路径指定一个 handler 函数。</div><div class="line">// 这个 handler 函数会接收 req 和 res 两个对象，他们分别是请求的 request 和 response。</div><div class="line">// request 中包含了浏览器传来的各种信息，比如 query 啊，body 啊，headers 啊之类的，都可以通过 req 对象访问到。</div><div class="line">// res 对象，我们一般不从里面取信息，而是通过它来定制我们向浏览器输出的信息，比如 header 信息，比如想要向浏览器输出的内容。这里我们调用了它的 #send 方法，向浏览器输出一个字符串。</div><div class="line">app.get(&apos;/&apos;, function (req, res) &#123;</div><div class="line">  res.send(&apos;Hello World&apos;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">// 定义好我们 app 的行为之后，让它监听本地的 3000 端口。这里的第二个函数是个回调函数，会在 listen 动作成功后执行，我们这里执行了一个命令行输出操作，告诉我们监听动作已完成。</div><div class="line">app.listen(3000, function () &#123;</div><div class="line">  console.log(&apos;app is listening at port 3000&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="lesson2-express-generator"><a href="#lesson2-express-generator" class="headerlink" title="lesson2 express generator"></a>lesson2 <a href="http://expressjs.com/en/starter/generator.html" target="_blank" rel="external">express generator</a></h1><ul>
+<li>使用应用生成工具<code>express-generator</code>来快速创建一个应用骨架</li>
+<li><code>express-generator</code>包安装了express的 命令行工具。使用下面命令安装</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install express-generator -g</div></pre></td></tr></table></figure>
+<ul>
+<li>使用 -h <code>帮助</code> 来显示 命令选项</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">$ express --view=jade myapp</div><div class="line"></div><div class="line">   create : myapp</div><div class="line">   create : myapp/package.json</div><div class="line">   create : myapp/app.js</div><div class="line">   create : myapp/public</div><div class="line">   create : myapp/public/javascripts</div><div class="line">   create : myapp/public/images</div><div class="line">   create : myapp/routes</div><div class="line">   create : myapp/routes/index.js</div><div class="line">   create : myapp/routes/users.js</div><div class="line">   create : myapp/public/stylesheets</div><div class="line">   create : myapp/public/stylesheets/style.css</div><div class="line">   create : myapp/views</div><div class="line">   create : myapp/views/index.jade</div><div class="line">   create : myapp/views/layout.jade</div><div class="line">   create : myapp/views/error.jade</div><div class="line">   create : myapp/bin</div><div class="line">   create : myapp/bin/www</div></pre></td></tr></table></figure>
+<ul>
+<li>接下来安装依赖</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd myapp</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<ul>
+<li>在 mac 或者 linux 上使用该命令运行程序</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ DEBUG=myapp:* npm start</div></pre></td></tr></table></figure>
+<ul>
+<li>在windows 上使用</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; set DEBUG=myapp:* &amp; npm start</div></pre></td></tr></table></figure>
+<ul>
+<li>接下来使用浏览器加载<code>http://localhost:3000/</code>进入你的应用</li>
+<li>生成的app 的文件结构如下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">.</div><div class="line">├── app.js</div><div class="line">├── bin</div><div class="line">│   └── www</div><div class="line">├── package.json</div><div class="line">├── public</div><div class="line">│   ├── images</div><div class="line">│   ├── javascripts</div><div class="line">│   └── stylesheets</div><div class="line">│       └── style.css</div><div class="line">├── routes</div><div class="line">│   ├── index.js</div><div class="line">│   └── users.js</div><div class="line">└── views</div><div class="line">    ├── error.jade</div><div class="line">    ├── index.jade</div><div class="line">    └── layout.jade</div><div class="line"></div><div class="line">7 directories, 9 files</div></pre></td></tr></table></figure>
+<ul>
+<li><p>学习使用外部模块  <a href="https://github.com/alsotang/node-lessons/tree/master/lesson2" target="_blank" rel="external">lesson2</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">// http://localhost:3000/?q=alsotang</div><div class="line">// npm install express utility --save</div><div class="line"></div><div class="line"></div><div class="line">app.js</div><div class="line">// 引入依赖</div><div class="line">var express = require(&apos;express&apos;);</div><div class="line">var utility = require(&apos;utility&apos;);</div><div class="line"></div><div class="line">// 建立 express 实例</div><div class="line">var app = express();</div><div class="line"></div><div class="line">app.get(&apos;/&apos;, function (req, res) &#123;</div><div class="line">  // 从 req.query 中取出我们的 q 参数。</div><div class="line">  // 如果是 post 传来的 body 数据，则是在 req.body 里面，不过 express 默认不处理 body 中的信息，需要引入 https://github.com/expressjs/body-parser 这个中间件才会处理，这个后面会讲到。</div><div class="line">  // 如果分不清什么是 query，什么是 body 的话，那就需要补一下 http 的知识了</div><div class="line">  var q = req.query.q;</div><div class="line"></div><div class="line">  // 调用 utility.md5 方法，得到 md5 之后的值</div><div class="line">  // 之所以使用 utility 这个库来生成 md5 值，其实只是习惯问题。每个人都有自己习惯的技术堆栈，</div><div class="line">  // 我刚入职阿里的时候跟着苏千和朴灵混，所以也混到了不少他们的技术堆栈，仅此而已。</div><div class="line">  // utility 的 github 地址：https://github.com/node-modules/utility</div><div class="line">  // 里面定义了很多常用且比较杂的辅助方法，可以去看看</div><div class="line">  var md5Value = utility.md5(q);</div><div class="line"></div><div class="line">  res.send(md5Value);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(3000, function (req, res) &#123;</div><div class="line">  console.log(&apos;app is running at port 3000&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><a href="link"></a></p>
+</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+<li>mdl</li>
+</ul>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>邓冰冰</h4>
+    <p>作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/11/30/node-一日游/" target="_blank">
+        <span class="hidden">weibo</span>
+    </a>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/11/30/node-一日游/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/30/node-一日游/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/30/node-一日游/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2016/11/30/mongodb与mongoose的使用/">
+        ← mongodb与mongoose的使用
+    </a>
+    
+    <span class="icon-logo">•</span>
+    
+    <a class="older-posts" href="/2016/11/30/javascript-高级/">
+        javascript 高级 →
+    </a>
+    
+</nav>
+
+  <div id="comment" class="comments-area">
+    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
+    
+</div>
+
+</main>
+
+
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">dengbb的技术博客</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/archive"><span>Archive</span></a>
+
+          <a class="icon-image"  href="/images"><span>Images</span></a>
+
+          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
+
+          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
+
+          <a class="icon-mail"  href="/about/2014-09-11-mabao/"><span>Contact</span></a>
+
+</nav>
+
+</div>
+</body>
+</html>

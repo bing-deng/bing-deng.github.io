@@ -1,291 +1,320 @@
 <!DOCTYPE html>
-<!--[if lte IE 8 ]>
-<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--
-***************  *      *     *
-      8          *    *       *
-      8          *  *         *
-      8          **           *
-      8          *  *         *
-      8          *    *       *
-      8          *      *     *
-      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
--->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
+<html>
 
 <head>
-  <title>Hexo</title>
-  <!-- Meta data -->
-    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content="Hexo">
-    <meta name="author" content="John Doe">
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-
-    <!-- Favicon, (keep icon in root folder) -->
-    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
-
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
-	
-    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
-    
-    
-
-    <!-- Custom stylesheet, (add custom styles here, always load last) -->
-    <!-- Load our stylesheet for IE8 -->
-    <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
-    <![endif]-->
-
-    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
-    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-
-    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
-    <!--[if IE]>
-    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-    <![endif]-->
-
-    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
-    <script src="/js/jquery-1.11.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
-
-    <!-- Load these in the <head> for quicker IE8+ load times -->
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="/js/html5shiv.min.js"></script>
-    <script src="/js/respond.min.js"></script>
-    <![endif]-->
-
-
-
-
-
-
-
-
-
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>dengbb的技术博客</title>
+  <meta name="description" content="小贝贝斯手" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="dengbb的技术博客">
 
   
   
   
 
   
-  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
 <!--
 <body class="home-template">
 -->
-<body id="index" class="lightnav animsition">
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
 
-      <!-- ============================ Off-canvas navigation =========================== -->
-
-    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
-        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
-            <img src="/img/close.png" alt="Close"/>
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">dengbb的技术博客</h1>
+            <h2 class="blog-description">小贝贝斯手<button id="showMenu">Show Menu</button></h2>
         </div>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu">
-            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
-            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
-            <!-- Dropdown Menu -->
-			 
-            <li>
-                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
-                    
-                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
-                    
-                        <li><a href="/javascipt" target="_BLANK" class="animsition-link">javascipt</a></li>
-                    
-                </ul>
-            </li>
-            
-            
-            
-            <li>
-                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
-                <ul class="sb-submenu">
-                    
-                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
-                    
-                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
-                    
-                </ul>
-            </li>
-            
-        </ul>
-        <!-- Lists in Slidebars -->
-        <ul class="sb-menu secondary">
-            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
-            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
-        </ul>
     </div>
+</header>
+
+      
+<main class="content" role="main">
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2016-12-02T09:25:30.000Z" itemprop="datePublished">
+          2016-12-02
+      </time>
     
-    <!-- ============================ END Off-canvas navigation =========================== -->
-
-    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
-
-    <div id="sb-site">
-        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-        <div id="navigation" class="navbar navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- Nav logo -->
-                    <div class="logo">
-                        <a href="/" title="Logo" class="animsition-link">
-                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
-                        </a>
-                    </div>
-                    <!-- // Nav logo -->
-                    <!-- Info-bar -->
-                    <nav>
-                        <ul class="nav">
-                            <li><a href="/" class="animsition-link">Hexo</a></li>
-                            <li class="nolink"><span>Always </span>Creative.</li>
-                            
-                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
-                            
-                            
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
-                            
-                            
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
-                            
-                            
-                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
-                            
-                            
-                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
-                            
-                            <li class="nolink"><span>Welcome!</span></li>
-                        </ul>
-                    </nav>
-                    <!--// Info-bar -->
-                </div>
-                <!-- // .container -->
-                <div class="learnmore sb-toggle-right">More</div>
-                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar before"></span>
-                <span class="icon-bar main"></span>
-                <span class="icon-bar after"></span>
-                </button>
-            </div>
-            <!-- // .navbar-inner -->
-        </div>
-
-        <!-- ============================ Header & Logo bar =========================== -->
-
-
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-<!-- ============================ Content =========================== -->
-
-<section id="intro">
-    <div class="container">
+</span>
+      <h2 class="post-title"><a href="/2016/12/02/设计学习资源/">设计学习资源</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
         
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/29/React-native的IDE配置/">React-native的IDE配置</a></h3>
-                    <span>
-                        <span class="post-meta">
+IOS 开发者使用sketch
+
+
+      
+      </p>
+      
+      <p>
+          <a href="/2016/12/02/设计学习资源/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2016-12-02T01:22:00.000Z" itemprop="datePublished">
+          2016-12-02
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2016/12/02/Linux命令/">Linux命令</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+鸟哥的Linux 私房菜- 基础学习篇目录
+
+man
+
+你想知道ls命令的用法和选项，可以在终端执行“man ls”：
+
+
+touch，cat和less命令
+touch命令可以在Linux系统中创建大小为0的任意类型文件
+cat命令用来查看文件的内容，但是使用cat命令并不能编辑文件的内容
+同样的less命令也可以让你浏览文件
+
+
+sort和grep命令
+sort命令用来对文件内容进行排序 sort -k2 test.txt
+Grep
+      
+      </p>
+      
+      <p>
+          <a href="/2016/12/02/Linux命令/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2016-11-30T09:08:54.000Z" itemprop="datePublished">
+          2016-11-30
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2016/11/30/srping-boot-资料和常用知识/">srping-boot 资料和常用知识</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        资料
+官方
+spring-boot github
+快速入门
+使用idea 创建boot应用 
+GitBook 
+Spring Boot特性
+
+spring-boot的相关命令行12345命令行启动 spring-boot $ mvn springboot:run #命令启动$ mvn clean package #打包$ java -jar *.jar #部署jar
+spring-boot 常见错误
+打包jar 运行失败。
+
+解决办法：
+      
+      </p>
+      
+      <p>
+          <a href="/2016/11/30/srping-boot-资料和常用知识/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2016-11-30T07:43:16.000Z" itemprop="datePublished">
+          2016-11-30
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2016/11/30/快捷键/">快捷键</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+Andorid Studio
+Android Studio相见恨晚的操作锦集(9月22日更新) 
+
+
+chrome
+
+
+      
+      </p>
+      
+      <p>
+          <a href="/2016/11/30/快捷键/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2016-11-30T06:06:41.000Z" itemprop="datePublished">
+          2016-11-30
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2016/11/30/mongodb与mongoose的使用/">mongodb与mongoose的使用</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+hbase 和 redis 和 mongodb 和 couchdb 虽然都属于 nosql 的大范畴
+hbase 是存海量数据的
+redis 用来做缓存
+而 mongodb 和 couchdb 则试图取代一些使用 mysql 的场景
+
+
+在 sql 中，我们的数据层级是：数据库（db） -&gt; 表（table） -&gt; 记录（record）-&gt; 字段；
+在 mongodb 中，数据的层级是：数据库 -&gt; colle
+      
+      </p>
+      
+      <p>
+          <a href="/2016/11/30/mongodb与mongoose的使用/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2016-11-30T02:26:49.000Z" itemprop="datePublished">
+          2016-11-30
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2016/11/30/node-一日游/">node 一日游</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+淘宝 NPM 镜像 安装cnpm 与 npm 只差一个publis 命令
+
+lesson1  中文版
+项目搭建命令
+123456$ mkdir myapp$ cd myapp$ npm init$ npm install express --save or $ npm install expressor 使用国内$ npm install express --registry=https://registry.npm.taobao.o
+      
+      </p>
+      
+      <p>
+          <a href="/2016/11/30/node-一日游/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
+      <time datetime="2016-11-30T01:43:09.000Z" itemprop="datePublished">
+          2016-11-30
+      </time>
+    
+</span>
+      <h2 class="post-title"><a href="/2016/11/30/javascript-高级/">javascript 高级</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
+      
+      </p>
+      
+      <p>
+          <a href="/2016/11/30/javascript-高级/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
       <time datetime="2016-11-29T06:46:34.000Z" itemprop="datePublished">
           2016-11-29
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        
+      <h2 class="post-title"><a href="/2016/11/29/React-native的IDE配置/">React-native的IDE配置</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
 推荐以下几款工具:sublime,webstorm以及官网推荐的Nuclide
 
 
 IDE-Nuclide
+
 Nuclide是Atom的基础上面提供了一系列的插件集合,先装Atom
 atom
 
 
+ sublimeText
 
-   参考文章 
+webstorm
+参考文章 
 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/29/React-native的IDE配置/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/29/React-naive学习资料/">React-naive学习资料</a></h3>
-                    <span>
-                        <span class="post-meta">
+
+
+      
+      </p>
+      
+      <p>
+          <a href="/2016/11/29/React-native的IDE配置/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
       <time datetime="2016-11-29T06:24:58.000Z" itemprop="datePublished">
           2016-11-29
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        
+      <h2 class="post-title"><a href="/2016/11/29/React-naive学习资料/">React-naive学习资料</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        
 官方教程
 组件生命周期
 IDE-Nuclide
@@ -297,41 +326,37 @@ atom
 列库总结 (中文)
 
 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/29/React-naive学习资料/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/29/js学习资源/">js学习资源</a></h3>
-                    <span>
-                        <span class="post-meta">
+      
+      </p>
+      
+      <p>
+          <a href="/2016/11/29/React-naive学习资料/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <article class="post">
+    <header class="post-header">
+      <span class="post-meta">
       <time datetime="2016-11-29T06:14:57.000Z" itemprop="datePublished">
           2016-11-29
       </time>
     
 </span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        js 学习资源
+      <h2 class="post-title"><a href="/2016/11/29/js学习资源/">js学习资源</a></h2>
+    </header>
+    <section class="post-excerpt">
+      <p>
+      
+        js 学习资源 &amp;&amp; node 学习资源
 语言
 
-《ECMAScript 6入门》是一本开源的JavaScript语言教程，全面介绍ECMAScript 6新引入的语法特性 阮一峰 
+《ECMAScript 6入门是一本开源的JavaScript语言教程，全面介绍ECMAScript 6新引入的语法特性  阮一峰 
 js基础语法
 node.js七天教程
+node
+node 中文网
 
 
 框架
@@ -340,359 +365,62 @@ node.js七天教程
 
 
 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/29/js学习资源/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/29/sublime安装OmniMarkupPreviewer插件/">sublime安装OmniMarkupPreviewer插件</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-11-29T05:48:06.000Z" itemprop="datePublished">
-          2016-11-29
-      </time>
+      
+      </p>
+      
+      <p>
+          <a href="/2016/11/29/js学习资源/" class="excerpt-link">Read More...</a>
+      </p>
+      
+    </section>
+  </article>
+  
+  <nav class="pagination" role="pagination">
     
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        #sublime markdown 插件-OmniMarkupPreviewer插件
+    <span class="page-number">Page 1 of 2</span>
+    <a class="older-posts" href="/page/2/">Older Posts →</a>
+  </nav>
+</main>
 
-安装OmniMarkupPreviewer插件后
-cmd+option+o 运行404以下是解决办法
-
-Sublime Text &gt; Preferences &gt; Package Settings &gt; OmniMarkupPreviewer &gt; Settings - User
-12345&#123;    &quot;rende
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/29/sublime安装OmniMarkupPreviewer插件/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/29/javaScript-中级教程/">javaScript 中级教程</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-11-29T03:14:38.000Z" itemprop="datePublished">
-          2016-11-29
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        js类型
-Number（数字）
-String（字符串）
-Boolean（布尔）
-Symbol（符号）（第六版新增）
-Object（对象）
-Function（函数）
-Array（数组）
-Date（日期）
-RegExp（正则表达式）
-
-
-Null（空）
-Undefined（未定义）
-
-资料来源
-数字1.JavaScript 不支持类，类这一概念在 JavaScript 通过对象原型（object prototype）得到延续（有关 ES6 
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/29/javaScript-中级教程/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/28/hello-world/">Hello World</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-11-28T09:04:24.000Z" itemprop="datePublished">
-          2016-11-28
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new p
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/28/hello-world/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/28/React-Native-安装（Mac）/">React Native 安装（Mac）</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-11-28T08:22:17.000Z" itemprop="datePublished">
-          2016-11-28
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        #React-native start
-官方文档安装步骤
-安装环境1.Homebrewhttp://brew.sh/1$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-2.Node.jshttps://github.com/creationix/nvm12$ curl -o- http
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/28/React-Native-安装（Mac）/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/28/cocoapods使用/">cocoapods使用</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-11-28T03:32:25.000Z" itemprop="datePublished">
-          2016-11-28
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        cocoapods安装1sudo gem install -n /usr/local/bin cocoapods
-###创建podfile 文件时 官网推荐12345678platform :ios, &apos;8.0&apos;#use_frameworks!个别需要用到它，比如reactiveCocoatarget &apos;MyApp&apos; do  pod &apos;AFNetworking&apos;, &apos;
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/28/cocoapods使用/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/28/javaScript框架/">javaScript框架</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-11-28T03:11:00.000Z" itemprop="datePublished">
-          2016-11-28
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        js 框架AngularAngular 是一款流行的企业级框架，很多程序员都用它来构建和维护复杂的网页应用。Angular 拥有巨大的人气，使用它的公司跟 Domino 的 Pizza 种类一样多，如 Ryanair, iTunes Connect, PayPal Checkout, Google。Angular 是一个由 Google 支持的开源框架。Angular 称自己为构建复杂网页应用而对 HTML 的扩展。如果你也对 Type
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/28/javaScript框架/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 opening-statement">
-                <div class="col-md-4">
-                    <h3><a href="/2016/11/28/javaScript基础/">javaScript基础</a></h3>
-                    <span>
-                        <span class="post-meta">
-      <time datetime="2016-11-28T03:07:41.000Z" itemprop="datePublished">
-          2016-11-28
-      </time>
-    
-</span>
-                    </span>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                      
-                        javaScript 基础
-Javascript于1995年由网景公司的Brendan Eich发明。 最初发明的目的是作为一个简单的网站脚本语言，来作为 复杂网站应用java的补充。但由于它与网页结合度很高并且由浏览器内置支持， 所以javascript变得比java在前端更为流行了。不过 JavaScript 可不仅仅只用于浏览器： Node.js，一个基于Google Chrome V8引擎的独立运行时环境，也越来越流行。
-
-le
-                      
-                    </p>
-                    
-                    <p class="pull-right readMore">
-                        <a href="/2016/11/28/javaScript基础/">Read More...</a>
-                    </p>
-                    
-                </div>
-                <div class="clearfix"></div>
-                <hr class="nogutter">
-            </div>
-        </div>
-        
-        <nav class="pagination" role="pagination">
-          
-          
-        </nav>
-    </div>
-</section>
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
-        </div>
-    </div>
-</section>
-<!-- ============================ END Content =========================== -->
 
       
-<!-- ============================ Footer =========================== -->
-
-<footer>
-    <div class="container">
-            <div class="copy">
-                <p>
-                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
-                </p>
-                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
-            </div>
-            <div class="social">
-                <ul>
-                    
-                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
-                    
-                    
-                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
-                    
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">dengbb的技术博客</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
 </footer>
 
-<!-- ============================ END Footer =========================== -->
-      <!-- Load our scripts -->
-<!-- Resizable 'on-demand' full-height hero -->
-<script type="text/javascript">
-    var resizeHero = function () {
-        var hero = $(".cover,.heightblock"),
-            window1 = $(window);
-        hero.css({
-            "height": window1.height()
-        });
-    };
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-    resizeHero();
-
-    $(window).resize(function () {
-        resizeHero();
-    });
-</script>
-<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
-<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
-<script src="/js/scripts.js"></script><!-- Theme scripts -->
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
 
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$('#intro').find('img').each(function(){
-  var alt = this.alt;
 
-  if (alt){
-    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
-  }
 
-  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
-});
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
 
-<!-- Initiate flexslider plugin -->
-<script type="text/javascript">
-    $(document).ready(function($) {
-      $('.flexslider').flexslider({
-        animation: "fade",
-        prevText: "",
-        nextText: "",
-        directionNav: true
-      });
-    });
-</script>
+  </div>
+</div>
 
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/archive"><span>Archive</span></a>
+
+          <a class="icon-image"  href="/images"><span>Images</span></a>
+
+          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
+
+          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
+
+          <a class="icon-mail"  href="/about/2014-09-11-mabao/"><span>Contact</span></a>
+
+</nav>
+
+</div>
 </body>
 </html>

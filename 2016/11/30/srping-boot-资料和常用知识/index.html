@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>cocoapods使用 | dengbb的技术博客</title>
+  <title>srping-boot 资料和常用知识 | dengbb的技术博客</title>
   <meta name="description" content="小贝贝斯手" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -44,18 +44,34 @@
 <main class="content" role="main">
   <article class="post">
     <span class="post-meta">
-      <time datetime="2016-11-28T03:32:25.000Z" itemprop="datePublished">
-          2016-11-28
+      <time datetime="2016-11-30T09:08:54.000Z" itemprop="datePublished">
+          2016-11-30
       </time>
     
 </span>
-    <h1 class="post-title">cocoapods使用</h1>
+    <h1 class="post-title">srping-boot 资料和常用知识</h1>
     <section class="post-content">
-      <h1 id="cocoapods"><a href="#cocoapods" class="headerlink" title="cocoapods"></a><a href="https://cocoapods.org/" target="_blank" rel="external">cocoapods</a></h1><p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods</div></pre></td></tr></table></figure></p>
-<p>###创建podfile 文件时 官网推荐<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div><div class="line"></div><div class="line">target &apos;MyApp&apos; do</div><div class="line">  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;</div><div class="line">  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;</div><div class="line">end</div></pre></td></tr></table></figure></p>
-<p>否则会报错<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The dependency `FMDB (~&gt; 2.3)` is not used in any concrete target.</div></pre></td></tr></table></figure></p>
-<p>###或者另外一种写法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div><div class="line"></div><div class="line">def pods</div><div class="line">  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;</div><div class="line">  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;</div><div class="line">end</div><div class="line">target &apos;MyApp&apos; do</div><div class="line">  pods</div><div class="line">end</div></pre></td></tr></table></figure>
+      <h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><ul>
+<li><a href="http://docs.spring.io/spring-boot/docs/current/reference/html/getting-started-first-application.html" target="_blank" rel="external">官方</a></li>
+<li><a href="https://github.com/spring-projects/spring-boot" target="_blank" rel="external">spring-boot github</a></li>
+<li><a href="http://blog.csdn.net/xiaoyu411502/article/details/47864969" target="_blank" rel="external">快速入门</a></li>
+<li><a href="https://patrickgrimard.io/2014/08/14/how-to-build-a-spring-boot-application-using-intellij-idea/" target="_blank" rel="external">使用idea 创建boot应用</a> </li>
+<li><a href="https://qbgbook.gitbooks.io/spring-boot-reference-guide-zh/content/I.%20Spring%20Boot%20Documentation/4.%20Working%20with%20Spring%20Boot.html" target="_blank" rel="external">GitBook</a> </li>
+<li><a href="https://github.com/qibaoguang/SpringStudy/blob/master/doc/spring_boot_features.md" target="_blank" rel="external">Spring Boot特性</a></li>
+</ul>
+<h3 id="spring-boot的相关命令行"><a href="#spring-boot的相关命令行" class="headerlink" title="spring-boot的相关命令行"></a>spring-boot的相关命令行</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">命令行启动 spring-boot </div><div class="line">$ mvn springboot:run #命令启动</div><div class="line">$ mvn clean package #打包</div><div class="line"></div><div class="line">$ java -jar *.jar #部署jar</div></pre></td></tr></table></figure>
+<h3 id="spring-boot-常见错误"><a href="#spring-boot-常见错误" class="headerlink" title="spring-boot 常见错误"></a>spring-boot 常见错误</h3><ul>
+<li><p>打包jar 运行失败。</p>
+<ul>
+<li>解决办法：升级到springboot 到1.4.1</li>
+</ul>
+</li>
+<li><p><strong> WARNING </strong> : Your ApplicationContext is unlikely to start due to a @ComponentScan of the default package.</p>
+<ul>
+<li><a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=3&amp;ved=0ahUKEwict8Cft-bPAhUBw…" target="_blank" rel="external">是因为application.java 文件不能直接放在main/java文件夹下，必须要建一个包把他放进去</a></li>
+</ul>
+</li>
+</ul>
 
     </section>
     <footer class="post-footer">
@@ -65,18 +81,18 @@
 </section>
       <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/11/28/cocoapods使用/" target="_blank">
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/11/30/srping-boot-资料和常用知识/" target="_blank">
         <span class="hidden">weibo</span>
     </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/11/30/srping-boot-资料和常用知识/"
        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/30/srping-boot-资料和常用知识/"
        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/30/srping-boot-资料和常用知识/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
@@ -86,14 +102,14 @@
   </article>
   <nav class="pagination" role="pagination">
     
-    <a class="newer-posts" href="/2016/11/28/React-Native-安装（Mac）/">
-        ← React Native 安装（Mac）
+    <a class="newer-posts" href="/2016/12/02/Linux命令/">
+        ← Linux命令
     </a>
     
     <span class="icon-logo">•</span>
     
-    <a class="older-posts" href="/2016/11/28/javaScript框架/">
-        javaScript框架 →
+    <a class="older-posts" href="/2016/11/30/快捷键/">
+        快捷键 →
     </a>
     
 </nav>
