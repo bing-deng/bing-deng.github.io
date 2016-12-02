@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>javaScript 中级教程 | Hexo</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Hexo">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                        <li><a href="/javascipt" target="_BLANK" class="animsition-link">javascipt</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Hexo</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-11-29T03:14:38.000Z" itemprop="datePublished">
+          2016-11-29
+      </time>
+    
+</span>
+                <h1>javaScript 中级教程</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<h1 id="js类型"><a href="#js类型" class="headerlink" title="js类型"></a>js类型</h1><ul>
+<li>Number（数字）</li>
+<li>String（字符串）</li>
+<li>Boolean（布尔）</li>
+<li>Symbol（符号）（第六版新增）</li>
+<li>Object（对象）<ul>
+<li>Function（函数）</li>
+<li>Array（数组）</li>
+<li>Date（日期）</li>
+<li>RegExp（正则表达式）</li>
+</ul>
+</li>
+<li>Null（空）</li>
+<li>Undefined（未定义）</li>
+</ul>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript" target="_blank" rel="external">资料来源</a></p>
+<h2 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h2><p>1.JavaScript <code>不支持类</code>，类这一概念在 JavaScript 通过对象原型（object prototype）得到延续（有关 <code>ES6 类</code>的内容参考这里Classes）<br>2.JavaScript 中的<code>函数</code>也是对象，JavaScript 允许函数在包含可执行代码的同时，能像其他对象一样被传递<br>3.JavaScript 还有一种<code>内置Error（错误）类型</code><br>4.JavaScript 采用“IEEE 754 标准定义的双精度64位格式”（”double-precision 64-bit format IEEE 754 values”）表示数字<code>,JavaScript 不区分整数值和浮点数值</code><br>5.<code>内置对象 Math（数学对象）</code>，用以处理更多的高级数学函数和常数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">*内置对象 Math（数学对象）</div><div class="line">*/</div><div class="line">console.log(parseInt(&apos;23&apos;))// 内置函数 parseInt()方法</div><div class="line">console.log(parseInt(&apos;010&apos;,2))// 第二个参数为进制数</div><div class="line">console.log(parseFloat(&apos;3.4&apos;))//与parseInt()不同的地方是，parseFloat()只应用于解析十进制数字</div><div class="line">parseInt(&quot;hello&quot;, 10); // NaN,如果给定的字符串不存在数值形式，函数会返回一个特殊的值 NaN（Not a Number 的缩写）：</div><div class="line">console.log(isNaN(NaN))// true</div><div class="line">console.log(NaN+4)// NaN</div><div class="line"></div><div class="line">//JavaScript 还有两个特殊值：Infinity（正无穷）和 -Infinity（负无穷）：</div><div class="line">console.log(1/0)</div><div class="line">console.log(-1/0)</div><div class="line">// 可以使用内置函数 isFinite() 来判断一个变量是否为 Infinity, -Infinity 或 NaN：,是返回false</div><div class="line">console.log(isFinite(1/0))// false</div><div class="line">console.log(isFinite(-Infinity))// false</div><div class="line">console.log(isFinite(NaN))// false</div><div class="line">console.log(parseFloat(&apos;10.2abc&apos;))//10.2  parseInt() 和 parseFloat() 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。使用运算符 &quot;+&quot; 将字符串转换成数字，只要字符串中含有无法被解析成数字的字符，该字符串都将被转换成 NaN。请你用这两种方法分别解析“10.2abc”这一字符串，比较得到的结果，理解这两种方法的区别。</div></pre></td></tr></table></figure>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">/*</div><div class="line">* 字符串</div><div class="line"></div><div class="line">*/</div><div class="line">// JavaScript 中的字符串是一串Unicode 字符序列。</div><div class="line">console.log(&quot;hello&quot;.length)</div><div class="line">console.log(&quot;hello&quot;.charAt(3))// 越界返回空</div><div class="line">console.log(&quot;hello&quot;.toUpperCase())</div><div class="line"></div><div class="line">#其他类型</div><div class="line"></div><div class="line">/*</div><div class="line">* 其他类型</div><div class="line">*/</div><div class="line"></div><div class="line">//JavaScript 中 null 表示一个空值（non-value），必须使用null关键字才能访问，</div><div class="line">var age = null;</div><div class="line">console.log(age)// null</div><div class="line">// undefined是“undefined（未定义）”类型的对象，表示一个未初始化的值，也就是还没有被分配的值</div><div class="line">var name </div><div class="line">console.log(name) // undefined是</div><div class="line"></div><div class="line">//JavaScript 按照如下规则将变量转换成布尔类型 </div><div class="line">//false、0、空字符串(&quot;&quot;)、NaN、null 和 undefined 被转换为 false</div><div class="line">console.log(Boolean(null))</div><div class="line">//所有其他值被转换为 true</div><div class="line">console.log(Boolean(&quot;a&quot;))</div></pre></td></tr></table></figure>
+<h2 id="对象-字典"><a href="#对象-字典" class="headerlink" title="对象(字典)"></a>对象(字典)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">//JavaScript 中的对象可以简单理解成“名称-值”对</div><div class="line"></div><div class="line">// 创建一个空对象</div><div class="line">var obj = new Object()</div><div class="line">// 或</div><div class="line">var obj2 = &#123;&#125;</div><div class="line"></div><div class="line">var student = &#123;</div><div class="line">	name:&quot;deng&quot;,</div><div class="line">	&quot;age&quot;:&quot;12&quot;,</div><div class="line">	details: &#123;</div><div class="line">		color: &quot;orange&quot;,</div><div class="line">		size: 12</div><div class="line">	    &#125;</div><div class="line">&#125;</div><div class="line">console.log(student.details)// 链式（chain）表示方法进行访问</div><div class="line"></div><div class="line">//对象原型</div><div class="line">function Person(name,age) &#123;</div><div class="line">	this.name = name;</div><div class="line">	this.age = age;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var zhang = new Person(&quot;zhang&quot;, 12)</div><div class="line"></div><div class="line">console.log(zhang.age)</div><div class="line"></div><div class="line"></div><div class="line">obj.name = &quot;Simon&quot;</div><div class="line">obj.age = 13</div><div class="line">obj.hobby = &quot;play&quot;</div><div class="line">var name = obj.name;</div><div class="line">console.log(obj)</div></pre></td></tr></table></figure>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank" rel="external">数组</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line">*  数组</div><div class="line">*/</div><div class="line">//JavaScript 中的数组是一种特殊的对象。它的工作原理与普通对象类似（以数字为属性名，但只能通过[] 来访问），但数组还有一个特殊的属性——length（长度）属性。这个属性的值通常比数组最大索引大 1。</div><div class="line"></div><div class="line">var a = [&quot;dog&quot;, &quot;cat&quot;, &quot;hen&quot;];</div><div class="line">console.log(a.length)// 3</div><div class="line">a[100] = &quot;fox&quot;;</div><div class="line">console.log(a.length) // 101 数组的长度是比数组最大索引值+1</div><div class="line">console.log(typeof(a[90])) // 如果试图访问一个不存在的数组索引，会得到 undefined：</div><div class="line">a.push(&quot;pig&quot;)// .push()添加元素</div><div class="line">a.shift() // 删除第一个元素</div><div class="line">a.pop()// 删除并返回数组中的最后一个元素</div><div class="line">a.join(sep) // 返回一个包含数组中所有元素的字符串，每个元素通过指定的 sep 分隔</div><div class="line">a.toString()// 返回一个包含数组中所有元素的字符串，每个元素通过逗号分隔</div></pre></td></tr></table></figure>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
+<li>可以传入多于函数本身需要参数个数的参数,多余的参数会被忽略</li>
+<li>arguments 内部对象,参数放到给字典中 按照 0 1 2 …</li>
+<li>一个没有值的 return 语句，JavaScript 会返回 undefined</li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" target="_blank" rel="external">apply() 函数</a> ?</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">// 简单函数</div><div class="line">function add() &#123;</div><div class="line">	var sum = 0;</div><div class="line">	for (var i = 0, j = arguments.length; i &lt; j; i++) &#123;</div><div class="line">		sum += arguments[i];</div><div class="line">	&#125;</div><div class="line">	console.log(arguments)// &#123; &apos;0&apos;: 2, &apos;1&apos;: 3, &apos;2&apos;: 4, &apos;3&apos;: 5 &#125;</div><div class="line">	return sum;</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(add(2, 3, 4, 5)); // 14 函数实际上是访问了函数体中一个名为 arguments 的内部对象 使它可以接收任意个数的参数</div><div class="line"></div><div class="line"></div><div class="line">// 匿名函数</div><div class="line">var avg = function() &#123;</div><div class="line">	var sum = 0;</div><div class="line">	for (var i = 0, j = arguments.length; i &lt; j; i++) &#123;</div><div class="line">		sum += arguments[i];</div><div class="line">	&#125;</div><div class="line">	return sum / arguments.length;</div><div class="line">&#125;;</div><div class="line">console.log(avg(1,3,4))</div><div class="line">// 匿名函数</div><div class="line">var a = 1;</div><div class="line">var b = 2;</div><div class="line">(function() &#123;</div><div class="line">    var b = 3;</div><div class="line">    a += b;</div><div class="line">&#125;)();</div><div class="line"></div><div class="line">a; // 4</div><div class="line">b; // 2</div></pre></td></tr></table></figure>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2016/11/29/sublime安装OmniMarkupPreviewer插件/" style="float: left;">
+        ← sublime安装OmniMarkupPreviewer插件
+    </a>
+    
+    
+    <a class="pull-right" href="/2016/11/28/hello-world/">
+        Hello World →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2016/11/29/javaScript-中级教程/" data-title="javaScript 中级教程" data-url="http://yoursite.com/2016/11/29/javaScript-中级教程/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
+
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
+
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
