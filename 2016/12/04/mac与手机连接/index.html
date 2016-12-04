@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>cocoapods使用 | dengbb的技术博客</title>
+  <title>mac与手机连接 | dengbb的技术博客</title>
   <meta name="description" content="小贝贝斯手" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -44,18 +44,25 @@
 <main class="content" role="main">
   <article class="post">
     <span class="post-meta">
-      <time datetime="2016-11-28T03:32:25.000Z" itemprop="datePublished">
-          2016-11-28
+      <time datetime="2016-12-04T02:35:43.000Z" itemprop="datePublished">
+          2016-12-04
       </time>
     
 </span>
-    <h1 class="post-title">cocoapods使用</h1>
+    <h1 class="post-title">mac与手机连接</h1>
     <section class="post-content">
-      <h1 id="cocoapods"><a href="#cocoapods" class="headerlink" title="cocoapods"></a><a href="https://cocoapods.org/" target="_blank" rel="external">cocoapods</a></h1><p>安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo gem install -n /usr/local/bin cocoapods</div></pre></td></tr></table></figure></p>
-<p>###创建podfile 文件时 官网推荐<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div><div class="line"></div><div class="line">target &apos;MyApp&apos; do</div><div class="line">  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;</div><div class="line">  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;</div><div class="line">end</div></pre></td></tr></table></figure></p>
-<p>否则会报错<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The dependency `FMDB (~&gt; 2.3)` is not used in any concrete target.</div></pre></td></tr></table></figure></p>
-<p>###或者另外一种写法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div><div class="line"></div><div class="line">def pods</div><div class="line">  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;</div><div class="line">  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;</div><div class="line">end</div><div class="line">target &apos;MyApp&apos; do</div><div class="line">  pods</div><div class="line">end</div></pre></td></tr></table></figure>
+      <ul>
+<li><a href="https://www.android.com/filetransfer/" target="_blank" rel="external">android 文件传输</a><br>Android 的文件传输是由谷歌，主要用于为您自由地管理你的 Android 手机在 Mac 上创建的。它可以装载你的 Android 手机作为外部硬盘驱动器上，所以您可以将数据转移从安卓到 Mac，反之亦然。<br>特点:<ul>
+<li>作为一个外部的硬盘装入你的 Android 手机。</li>
+<li>打开任何文件夹或文件保存在你的 Android 手机的 SD 卡上。</li>
+<li>传输音乐、 视频、 照片和文档的文件，从 mac。</li>
+<li>连接方式:它允许通过 Android USB 电缆连接到 Mac 的安卓系统。</li>
+<li>它是免费的。</li>
+<li>您可以轻松访问到你的 Android 手机的 SD 卡。</li>
+<li>它只支持 Android 3.0</li>
+</ul>
+</li>
+</ul>
 
     </section>
     <footer class="post-footer">
@@ -65,18 +72,18 @@
 </section>
       <section class="share">
     <h4>Share this post</h4>
-    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/11/28/cocoapods使用/" target="_blank">
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/12/04/mac与手机连接/" target="_blank">
         <span class="hidden">weibo</span>
     </a>
-    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/12/04/mac与手机连接/"
        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
         <span class="hidden">Twitter</span>
     </a>
-    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/12/04/mac与手机连接/"
        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
         <span class="hidden">Facebook</span>
     </a>
-    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/11/28/cocoapods使用/"
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/12/04/mac与手机连接/"
        onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
         <span class="hidden">Google+</span>
     </a>
@@ -86,14 +93,10 @@
   </article>
   <nav class="pagination" role="pagination">
     
-    <a class="newer-posts" href="/2016/11/28/React-Native-安装（Mac）/">
-        ← React Native 安装（Mac）
-    </a>
-    
     <span class="icon-logo">•</span>
     
-    <a class="older-posts" href="/2016/11/28/javaScript框架/">
-        javaScript框架 →
+    <a class="older-posts" href="/2016/12/02/设计学习资源/">
+        设计学习资源 →
     </a>
     
 </nav>
