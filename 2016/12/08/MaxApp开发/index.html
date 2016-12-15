@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>MaxApp开发 | dengbb的技术博客</title>
+  <meta name="description" content="小贝贝斯手" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="dengbb的技术博客">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">dengbb的技术博客</h1>
+            <h2 class="blog-description">小贝贝斯手<button id="showMenu">Show Menu</button></h2>
+        </div>
+    </div>
+</header>
+
+      
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2016-12-08T01:35:41.000Z" itemprop="datePublished">
+          2016-12-08
+      </time>
+    
+</span>
+    <h1 class="post-title">MaxApp开发</h1>
+    <section class="post-content">
+      <h2 id="Apple-MacApp开发"><a href="#Apple-MacApp开发" class="headerlink" title="Apple MacApp开发"></a>Apple MacApp开发</h2><pre><code>[官网](https://developer.apple.com/library/content/documentation/General/Conceptual/MOSXAppProgrammingGuide/Introduction/Introduction.html) 
+</code></pre><h2 id="macdev"><a href="#macdev" class="headerlink" title="macdev"></a><a href="http://www.macdev.io/" target="_blank" rel="external">macdev</a></h2><ul>
+<li><p><a href="http://www.macdev.io/ebook/start.html" target="_blank" rel="external">第一课</a></p>
+<ul>
+<li>如果使用了非系统的第3方framework或者自己开发的framework，Code Signing 里面Other Code Signing Flags 必须设置为 –deep，否则无法正常打包发布到Mac Appstore</li>
+<li>Apple现在要求上架Mac AppStore的应用必须使用沙盒，所以发布到Mac商店的应用你必须选择打开</li>
+<li>如果你的应用要访问服务器的API接口，必须打开Outgoing Connections。<br>Hardware里面必须选择打开Printing，否则审核不通过</li>
+<li>File Accedd:如果你需要让用户选择访问本地的文件，User Selected File 中选择读/写权限。</li>
+<li>General 下 Application Category：可以选择一个应用的分类，提交Mac Appstore必须要有分类。</li>
+<li>Deployment Info:Deployment Target设置应用支持的最低OSX系统版本。</li>
+</ul>
+</li>
+<li><p><a href="http://www.macdev.io/ebook/window.html" target="_blank" rel="external">窗口对象</a></p>
+<ul>
+<li>可以接收输入事件(键盘,鼠标,触控板等外设)的窗口对象称为keyWindow;当前的活动窗口也称为mainWindow。一个时刻只能有一个keyWindow和一个mainWindow。</li>
+<li>一种特殊的window, 执行一些辅助功能。常用来做一些警告确认框,用户输入信息等对话框。<ul>
+<li>NSPanel类型的window不能做为mainWindow,只能做为keyWindow。</li>
+<li>一些常用的子类有NSColorPanel(颜色选择),NSFontPanel(字体选择),NSSavePanel(保存打开文件),</li>
+</ul>
+</li>
+<li>模态窗口 Modal windows &amp;&amp; Modal sessions<ul>
+<li>Modal windows启动后,此时只有这个window可以接收响应用户操作,无法切换到其他窗口操作,其他窗口也不能接收处理系统内部的各种事件</li>
+<li>Modal sessions方式创建的window,允许响应快捷键和系统菜单,比如字体颜色选择这些panel面板</li>
+<li>注意任何一种模态窗口,都必须调用结束模态的方法去结束模态。如果点击了window左上角的关闭按钮,而没有执行结束模态的方法。整个系统仍然处于模态,其他窗口无法正常工作。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a href="http://www.macdev.io/ebook/nsview.html" target="_blank" rel="external">视图和滚动条</a></p>
+<ul>
+<li>坐标系统<ul>
+<li>OSX系统中视图坐标系统原点(0,0)在XY坐标系的左下角。</li>
+</ul>
+</li>
+<li>Frame &amp; Bounds</li>
+<li>坐标转换</li>
+<li>视图layer属性<ul>
+<li>视图本身没有提供背景,边框,圆角等属性，可以利用layer属性来控制这些效果,使用层属性之前必须调用设置wantsLayer为YES</li>
+</ul>
+</li>
+<li><p>视图绘制</p>
+<ul>
+<li><p>drawRect方法中实现界面绘制</p>
+</li>
+<li><p>drawRect方法之外实现绘制 使用lockFocus方法锁定视图，完成绘制后在执行unlockFocus解锁</p>
+</li>
+</ul>
+</li>
+<li><p>事件响应</p>
+<ul>
+<li>视图的frame/bounds变化通知</li>
+<li>NSView视图继承自NSResponder,可以响应鼠标,键盘以及Action消息,消息可以沿着响应链一直追溯到事件方法的响应者为止</li>
+</ul>
+</li>
+<li>NSScrollView<ul>
+<li>内容视图NSClipView</li>
+<li>滚动条NSScroller</li>
+<li>需要滚动控制的文档视图</li>
+<li>滚动到指定位置 <code>scrollPoint</code> <code>scrollRectToVisible</code></li>
+</ul>
+</li>
+<li>NSTextView</li>
+<li>NSButton<h2 id="鼠标和键盘事件"><a href="#鼠标和键盘事件" class="headerlink" title="鼠标和键盘事件"></a><a href="http://www.macdev.io/ebook/event.html" target="_blank" rel="external">鼠标和键盘事件</a></h2><h2 id="Undo-Redo操作"><a href="#Undo-Redo操作" class="headerlink" title="Undo-Redo操作"></a><a href="http://www.macdev.io/ebook/undoRedo.html" target="_blank" rel="external">Undo-Redo操作</a></h2></li>
+</ul>
+</li>
+</ul>
+<h1 id="翻-OS-X和Swift入门指南"><a href="#翻-OS-X和Swift入门指南" class="headerlink" title="[翻]OS X和Swift入门指南"></a>[翻]OS X和Swift入门指南</h1><ul>
+<li><a href="http://www.tbago.com/osx/getting-started-with-os-x-and-swift-tutorial-part-1/" target="_blank" rel="external">one</a>   </li>
+<li><a href="http://www.tbago.com/ios/getting-started-with-os-x-and-swift-tutorial-part-2/" target="_blank" rel="external">two</a></li>
+<li><a href="http://www.tbago.com/ios/getting-started-with-os-x-and-swift-tutorial-part-3/" target="_blank" rel="external">three</a></li>
+</ul>
+<h1 id="ray"><a href="#ray" class="headerlink" title="ray"></a>ray</h1><ul>
+<li><a href="https://www.raywenderlich.com/110170/mac-os-x-development-tutorial-for-beginners-part-1-intro-to-xcode" target="_blank" rel="external">Mac OS X Development Tutorial for Beginners Part 1: Intro to Xcode</a></li>
+<li><a href="https://www.raywenderlich.com/category/macos" target="_blank" rel="external"> mac develop list</a>  </li>
+</ul>
+<h1 id="沙盒机智-详解"><a href="#沙盒机智-详解" class="headerlink" title="沙盒机智 详解"></a>沙盒机智 <a href="http://www.voidcn.com/blog/huang_123_456/article/p-5006453.html" target="_blank" rel="external">详解</a></h1><ul>
+<li>OSX自从10.6系统开始引入沙盒机制,规定发布到Mac AppStore的应用,必须遵守沙盒约定。沙盒对应用访问的系统资源,硬件外设,文件,网络,XPC,都做了严格的限制,这样能防止恶意的App通过系统漏洞,攻击系统,获取控制权限,保证了OSX系统的安全。</li>
+<li>沙盒相当于给每个App一个独立的空间,你只能在自己的小天地里面玩。要获取自己空间之外的资源必须获得授权。</li>
+<li>应用开发完成提交到App Store时，必须进行沙盒化。切换到工程target设置Tab的Capabilities中，第一项就是App Sandbox开关,点击ON,表示应用使用沙盒。</li>
+<li>应用运行期间要获取某个权限时，系统都会通过.entitlements去检查应用是否有授权，如果没有就拒绝访问。</li>
+<li>沙盒有个默认的规则:在App运行期间通过NSOpenPanel打开的任意位置的文件,把这个这个路径保存下来,后面都是可以直接用这个路径继续访问获取文件内容的。</li>
+<li>Security-scoped bookmark<ul>
+<li>An app-scoped bookmark:</li>
+<li>A document-scoped bookmark</li>
+<li>保存打开的文件URL的bookmark</li>
+<li>应用启动时通过URL的bookmark获取文件授权</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">Network:网络访问控制</div><div class="line">Incoming Connections(Server) :应用做为Server对外提供HTTP,FTP等服务时需要打开</div><div class="line">Outgoing Connections(Client):做为客户端，访问服务器时需要打开</div><div class="line"></div><div class="line">Hardware:硬件资源控, Printing为必须勾选。App的默认第一个顶级菜单中有打印功能的子菜单。</div><div class="line">Camera</div><div class="line">Micophone</div><div class="line">USB</div><div class="line">Printing</div><div class="line"></div><div class="line">App Data:获取系统的联系人，位置，日历服务时需要打开</div><div class="line">Contacts</div><div class="line">Location</div><div class="line">Calendar</div><div class="line"></div><div class="line">File Access:文件和用户目录的访问控制,分为禁止none,只读,读写3类</div><div class="line">User Selected File:文档类应用或者需要用户选择打开某个文件时,需要选择合适的访问权限.</div><div class="line">Downloads Folder</div><div class="line">Pictures Folder</div><div class="line">Music Folder</div><div class="line">Movies Folder</div></pre></td></tr></table></figure>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>邓冰冰</h4>
+    <p>作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/12/08/MaxApp开发/" target="_blank">
+        <span class="hidden">weibo</span>
+    </a>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/12/08/MaxApp开发/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/12/08/MaxApp开发/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/12/08/MaxApp开发/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <span class="icon-logo">•</span>
+    
+    <a class="older-posts" href="/2016/12/07/java迷你服务器NanoHTTPD/">
+        java迷你服务器NanoHTTPD →
+    </a>
+    
+</nav>
+
+  <div id="comment" class="comments-area">
+    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
+    
+</div>
+
+</main>
+
+
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">dengbb的技术博客</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/archive"><span>Archive</span></a>
+
+          <a class="icon-image"  href="/images"><span>Images</span></a>
+
+          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
+
+          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
+
+          <a class="icon-mail"  href="/about/2014-09-11-mabao/"><span>Contact</span></a>
+
+</nav>
+
+</div>
+</body>
+</html>

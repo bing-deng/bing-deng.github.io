@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>调研Mac连接安卓手机技术 | dengbb的技术博客</title>
+  <meta name="description" content="小贝贝斯手" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  <meta name="generator" content="dengbb的技术博客">
+
+  
+  
+  
+
+  
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body class="home-template">
+<div id="perspective" class="perspective effect-movedown">
+  <div class="container">
+    <!-- wrapper -->
+    <div class="wrapper">
+
+      <header class="site-head"  style="background: #24282b url(/img/img-bg.jpg) 0 -20%" >
+    <div class="vertical">
+        <div class="site-head-content inner">
+             <a class="blog-logo" href="/"><img src="/img/logo.svg" alt="Blog Logo"/></a> 
+            <h1 class="blog-title">dengbb的技术博客</h1>
+            <h2 class="blog-description">小贝贝斯手<button id="showMenu">Show Menu</button></h2>
+        </div>
+    </div>
+</header>
+
+      
+
+<main class="content" role="main">
+  <article class="post">
+    <span class="post-meta">
+      <time datetime="2016-12-05T01:50:51.000Z" itemprop="datePublished">
+          2016-12-05
+      </time>
+    
+</span>
+    <h1 class="post-title">调研Mac连接安卓手机技术</h1>
+    <section class="post-content">
+      <ul>
+<li><a href="https://read01.com/0dQMx.html" target="_blank" rel="external">锤子科技 mac 连接安卓手机  smartFinder</a></li>
+<li>AirDroid 通过无线实现 mac 连接安卓手机连接，不过需要下载客户端，注册账号</li>
+<li>由于 mac 本身不支持 （媒体设备）MTP协议，所以通过USB 将Android设备连接到mac是无法设备的。</li>
+<li>AirDroid <ul>
+<li>Snappea（豌豆荚面向海外市场推出的浏览器端手机管家）</li>
+<li>魔方手机助手</li>
+</ul>
+<ul>
+<li>PP助手Mac版</li>
+<li>iTools Mac版</li>
+<li>同步推Mac版</li>
+</ul>
+</li>
+<li><p>什么是 <a href="https://wiki.cyanogenmod.org/w/Doc:_adb_intro/zh-cn" target="_blank" rel="external">adb简介</a></p>
+<ul>
+<li>安装 <code>brew install android-platform-tools</code></li>
+<li>是一个开发工具，帮助安卓设备和个人计算机之间的通信。这种通信大多是在USB电缆下进行，但是也支持Wi-Fi连接。adb还可被用来与电脑上运行的安卓模拟器交流通信</li>
+<li>获取adb和fastboot的最佳方法是直接从Google下载Android SDK</li>
+<li>可以在计算机的终端程序中执行的最常用命令如下，CyanogenMod也不例外：</li>
+<li>adb shell —— 该命令在计算机中提供了与设备的命令行会话相应的shell接口。在实际使用中，这使用户可以“进入”他们设备，就像使用Linux或者Mac OS X计算机一样。个别的外壳命令可以通过键入adb shell &lt;要在设备上执行的命令&gt;发送到设备来执行。</li>
+<li>adb push &lt;本地文件&gt; &lt;远程文件&gt; —— 该命令将计算机中的&lt;本地文件&gt;作为&lt;远程文件&gt;推送到设备上。你可以在本地文件或远程文件中使用完整路径。</li>
+<li>adb pull &lt;远程文件&gt; [&lt;本地文件&gt;] —— 该命令将拉取设备上的远程文件（可以包含路径）到计算机的指定目录，如果没有指定目标目录，文件会保存到命令运行时的当前目录。</li>
+<li>adb logcat —— 该命令允许您实时查看设备日志。它对于调查和报告错误是很有用的。在较新版本的Android中，您可以添加-C（即adb logcat -C）以获得着色文本。</li>
+<li>adb install &lt;文件&gt; —— 用于“侧载”应用（使用 .apk 格式）到设备上。</li>
+<li>更多有用的 <a href="https://wiki.cyanogenmod.org/w/Adb_--help" target="_blank" rel="external">命令</a> ，请在这里察看全部指令列表。</li>
+</ul>
+</li>
+<li><p><a href="http://www.cnblogs.com/skywang12345/p/3474206.html" target="_blank" rel="external">Android之 MTP框架和流程分析</a></p>
+</li>
+<li><a href="https://developer.android.com/studio/command-line/adb.html" target="_blank" rel="external">android官方adb 介绍</a></li>
+<li><a href="http://blog.csdn.net/chwnpp2/article/details/44757285" target="_blank" rel="external">mac 通过adb 命令给安卓手机安装应用</a>  亲测好用<ul>
+<li>$ adb shell pm list packages #查看 安装应用列表 命令获取已安装的应用的包名</li>
+<li>$ adb install abc.apk # 安装应用</li>
+<li><a href="https://testerhome.com/topics/2565" target="_blank" rel="external">Android 常用 adb 命令总结</a></li>
+<li>adb 命令是 adb 这个程序自带的一些命令，而 adb shell 则是调用的 Android 系统中的命令，这些 Android 特有的命令都放在了 Android 设备的 system/bin 目录下，例如我再命令行中敲这样一个命令</li>
+<li><a href="http://blog.csdn.net/zjt107/article/details/50884126" target="_blank" rel="external">adb命令</a></li>
+<li>电脑浏览器运行<a href="http://localhost:8080/phone" target="_blank" rel="external">http://localhost:8080/phone</a> 查看设备信息 通过如下命令 $ adb forward tcp:8080 tcp:8080</li>
+<li>adb shell dumpsys package my.package | grep versionName</li>
+<li>adb shell dumpsys package my.package | grep version</li>
+<li><a href="http://www.jianshu.com/p/85066854c9e6" target="_blank" rel="external">简书 adb 命令</a></li>
+<li><a href="http://blog.csdn.net/shuaihj/article/details/8889465" target="_blank" rel="external">adb命令csdn</a></li>
+<li>截屏 adb shell screencap /sdcard/screen.png</li>
+<li>adb pull /sdcard/screen.png 拿回电脑截屏</li>
+</ul>
+</li>
+<li><a href="https://www.izhangheng.com/mac-os-x-homebrew-install-android-sdk" target="_blank" rel="external">homebrew 安装android sdk</a></li>
+<li><p>mac安装adb brew install android-platform-tools</p>
+</li>
+<li><p>Universal crossplatform Android Adb/Fastboot/TWRP/Recovery tools for Mac / Windows / Linux<br><a href="https://github.com/ZorgeR/DroidFlasher" target="_blank" rel="external">droid flasher</a></p>
+</li>
+<li><p><a href="https://github.com/mortenjust/androidtool-mac" target="_blank" rel="external">androidtool-mac</a></p>
+</li>
+<li><a href="http://blog.csdn.net/fengltxx/article/details/50072665" target="_blank" rel="external">通过USB数据线实现Android端与PC端的通信</a><ul>
+<li><a href="http://blog.csdn.net/foreverhuylee/article/details/20155675" target="_blank" rel="external">a</a>  </li>
+</ul>
+</li>
+<li>adb shell cat /system/build.prop | grep “product”</li>
+<li><p>adb 拉取图片到电脑 adb pull /sdcard/dcim/Camera/IMG_20161116_110149.jpg ~/desktop</p>
+</li>
+<li><p>iphone 工具itools 实现需要的类库</p>
+<ul>
+<li><a href="https://github.com/JanX2/JXZip" target="_blank" rel="external">libzip</a></li>
+<li><a href="https://github.com/cipi1965/MobileDeviceAccess" target="_blank" rel="external">mobile device access</a></li>
+<li><a href="https://bitbucket.org/tristero/mobiledeviceaccess" target="_blank" rel="external">mobile device access2 bitbucket</a></li>
+</ul>
+</li>
+<li><p>打开终端，输入：system_profiler SPUSBDataType，查看Mac系统所有USB设备信息，找到相应的厂商Vender ID</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">USB:</div><div class="line"></div><div class="line">    USB 3.0 Bus:</div><div class="line"></div><div class="line">      Host Controller Driver: AppleUSBXHCILPT</div><div class="line">      PCI Device ID: 0x9c31</div><div class="line">      PCI Revision ID: 0x0004</div><div class="line">      PCI Vendor ID: 0x8086</div><div class="line"></div><div class="line">        BRCM20702 Hub:</div><div class="line"></div><div class="line">          Product ID: 0x4500</div><div class="line">          Vendor ID: 0x0a5c  (Broadcom Corp.)</div><div class="line">          Version: 1.00</div><div class="line">          Speed: Up to 12 Mb/sec</div><div class="line">          Manufacturer: Apple Inc.</div><div class="line">          Location ID: 0x14300000 / 3</div><div class="line">          Current Available (mA): 500</div><div class="line">          Current Required (mA): 94</div><div class="line">          Extra Operating Current (mA): 0</div><div class="line">          Built-In: Yes</div><div class="line"></div><div class="line">            Bluetooth USB Host Controller:</div><div class="line"></div><div class="line">              Product ID: 0x828f</div><div class="line">              Vendor ID: 0x05ac  (Apple Inc.)</div><div class="line">              Version: 1.27</div><div class="line">              Speed: Up to 12 Mb/sec</div><div class="line">              Manufacturer: Apple Inc.</div><div class="line">              Location ID: 0x14330000 / 4</div><div class="line">              Current Available (mA): 500</div><div class="line">              Current Required (mA): 0</div><div class="line">              Extra Operating Current (mA): 0</div><div class="line">              Built-In: Yes</div><div class="line"></div><div class="line">        Android:</div><div class="line"></div><div class="line">          Product ID: 0x1052</div><div class="line">          Vendor ID: 0x12d1  (Huawei Technologies Co., Ltd.)</div><div class="line">          Version: 2.31</div><div class="line">          Serial Number: 022AUM9M37031761</div><div class="line">          Speed: Up to 480 Mb/sec</div><div class="line">          Manufacturer: Android</div><div class="line">          Location ID: 0x14200000 / 19</div><div class="line">          Current Available (mA): 500</div><div class="line">          Current Required (mA): 500</div><div class="line">          Extra Operating Current (mA): 0</div><div class="line"></div><div class="line">        iPhone:</div><div class="line"></div><div class="line">          Product ID: 0x12a8</div><div class="line">          Vendor ID: 0x05ac  (Apple Inc.)</div><div class="line">          Version: 7.02</div><div class="line">          Serial Number: d0704039a97d39a0a215c041d982aed8a3786ebe</div><div class="line">          Speed: Up to 480 Mb/sec</div><div class="line">          Manufacturer: Apple Inc.</div><div class="line">          Location ID: 0x14100000 / 21</div><div class="line">          Current Available (mA): 500</div><div class="line">          Current Required (mA): 500</div><div class="line">          Extra Operating Current (mA): 1600</div><div class="line">          Sleep current (mA): 2100</div></pre></td></tr></table></figure>
+<ul>
+<li><a href="http://hanks.xyz/2015/11/01/adb-wifi/" target="_blank" rel="external">adb wifi</a></li>
+<li><p><a href="https://www.gitbook.com/book/leon_lizi/-framework-/details" target="_blank" rel="external">mac 动态库实用</a></p>
+<ul>
+<li><a href="http://foggry.com/blog/2014/06/12/wwdc2014zhi-iosshi-yong-dong-tai-ku/" target="_blank" rel="external">iOS使用动态库
+</a>   </li>
+</ul>
+</li>
+<li><p><a href="https://github.com/NanoHttpd/nanohttpd" target="_blank" rel="external">java 小型服务器</a></p>
+<ul>
+<li>通过写一个安卓应用（当然是java）来获取 歌曲 视频 照片 等</li>
+<li>通过建立socket连接 adb forward localtcp servertcp 就可以访问了</li>
+</ul>
+</li>
+</ul>
+<h2 id="进程间通信"><a href="#进程间通信" class="headerlink" title="进程间通信"></a>进程间通信</h2><p>&gt;<br>首先，XPC 更多关注的是实现功能某种的方式，通常采用其他方式同样能够实现。并没有强调如果不使用 XPC，无法实现某些功能。</p>
+<p>XPC 目的是提高 App 的安全性和稳定性。XPC 让进程间通信变得更容易，让我们能够相对容易地将 App 拆分成多个进程的模式。更进一步的是，XPC 帮我管理了这些进程的生命周期，当我们需要与子进程通信的时候，子进程已经被 XPC 给运行起来了  XPC 是 OS X 下的一种 IPC (进程间通信) 技术, 它实现了权限隔离, 使得 App Sandbox 更加完备.</p>
+<ul>
+<li><a href="https://www.objccn.io/issue-14-4/" target="_blank" rel="external">xpc</a></li>
+<li><a href="https://segmentfault.com/a/1190000002400329" target="_blank" rel="external">xpc</a></li>
+<li>OSX10.7以后，cocoa新增加了一种新的技术，就是XPC</li>
+<li>XPC在10.8以后，直接在Foundation.framework中添加了NSXPCConnection相关的类</li>
+<li>查找电脑中使用xpc 服务的应用 <code>find /Applications -name \*.xpc</code></li>
+</ul>
+<h2 id="Max-os-x软件更新类库"><a href="#Max-os-x软件更新类库" class="headerlink" title="Max os x软件更新类库"></a>Max os x软件更新类库</h2><ul>
+<li><a href="https://github.com/sparkle-project/Sparkle" target="_blank" rel="external">Sparkle </a>   An easy-to-use software update framework for Cocoa developers.</li>
+</ul>
+<h2 id="Android搭建本地服务"><a href="#Android搭建本地服务" class="headerlink" title="Android搭建本地服务"></a>Android搭建本地服务</h2><blockquote>
+<p>目前接触到相关的比较好的框架是 <a href="https://github.com/NanoHttpd/nanohttpd" target="_blank" rel="external">nanohttpd</a> 和 <a href="https://github.com/koush/AndroidAsync" target="_blank" rel="external">AndroidAsync</a>。</p>
+<ul>
+<li>搭建自己的服务只需集成NanoHTTPD即可实现，在serve方法中封装实现响应形式</li>
+<li>AndroidAsync 是一个多功能库，从其中脱离出来的异步通信和图片加载框架ion非常受欢迎。AndroidAsync主要是一个基于NIO的异步socket，websocket，http客户端／服务端的通信框架，这里主要用到是http server</li>
+</ul>
+</blockquote>
+<h2 id="安卓设备之间传文件"><a href="#安卓设备之间传文件" class="headerlink" title="安卓设备之间传文件"></a>安卓设备之间传文件</h2><blockquote>
+<p>Android Beam file transfer <a href="https://developer.android.com/training/beam-files/send-files.html" target="_blank" rel="external">官网</a></p>
+</blockquote>
+<h2 id="MTP-资料"><a href="#MTP-资料" class="headerlink" title="MTP 资料"></a>MTP 资料</h2><ul>
+<li><a href="https://github.com/Higeco/hmtp" target="_blank" rel="external">hmtp</a><ul>
+<li>This project started as a way to send and receive files between Android/Microsoft smartphones and a linux embedded device through USB cables. I used libmtp. We found this was not what we needed so we decided to opensource our work, it could be a helpful example of what can be done. Actually this program let you send/receive files and list directory content. Quite simple at the moment.</li>
+</ul>
+</li>
+</ul>
+
+    </section>
+    <footer class="post-footer">
+      <section class="author">
+    <h4>邓冰冰</h4>
+    <p>作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来</p>
+</section>
+      <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-sina-weibo" href="http://v.t.sina.com.cn/share/share.php?title=作为挨踢业的伪设计狮伪技术牛 搬过砖也种过地：爱看、爱听、爱玩儿、爱折腾、机械水电、泥瓦木匠啥都来 ?url=http://yoursite.com/2016/12/05/调研Mac连接安卓手机技术/" target="_blank">
+        <span class="hidden">weibo</span>
+    </a>
+    <a class="icon-twitter" href="http://twitter.com/share?url=http://yoursite.com/2016/12/05/调研Mac连接安卓手机技术/"
+       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2016/12/05/调研Mac连接安卓手机技术/"
+       onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=http://yoursite.com/2016/12/05/调研Mac连接安卓手机技术/"
+       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+
+    </footer>
+  </article>
+  <nav class="pagination" role="pagination">
+    
+    <a class="newer-posts" href="/2016/12/06/Tunesgo-软件分解/">
+        ← Tunesgo 软件分解
+    </a>
+    
+    <span class="icon-logo">•</span>
+    
+    <a class="older-posts" href="/2016/12/04/mac配置/">
+        mac配置 →
+    </a>
+    
+</nav>
+
+  <div id="comment" class="comments-area">
+    <h4 class="title"><a href="#disqus_comments" name="disqus_comments">Comments</a></h4>
+    
+</div>
+
+</main>
+
+
+      
+<footer class="site-footer">
+  
+  <div class="inner">
+     <section class="copyright">All content copyright <a href="/">dengbb的技术博客</a> &copy; 2014 &bull; All rights reserved.</section>
+     <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://zespia.tw/hexo/">Hexo</a></section>
+  </div>
+</footer>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+<script type="text/javascript" src="/js/menu.js"></script>
+
+
+
+
+
+  </div>
+</div>
+
+<nav  class="outer-nav top horizontal">
+
+          <a class="icon-home"  href="/"><span>Home</span></a>
+
+          <a class="icon-news"  href="/archive"><span>Archive</span></a>
+
+          <a class="icon-image"  href="/images"><span>Images</span></a>
+
+          <a class="icon-wiki"  href="/wiki/2014-10-28-wiki/"><span>Wiki</span></a>
+
+          <a class="icon-Favorites"  href="/favorites"><span>Favorites</span></a>
+
+          <a class="icon-mail"  href="/about/2014-09-11-mabao/"><span>Contact</span></a>
+
+</nav>
+
+</div>
+</body>
+</html>
