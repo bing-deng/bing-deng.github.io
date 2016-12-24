@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>React-native的IDE配置 | dengbb的技术博客</title>
+  <title>Tunesgo 软件分解 | dengbb的技术博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -249,29 +249,56 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-11-29T06:46:34.000Z" itemprop="datePublished">
-          2016-11-29
+      <time datetime="2016-12-06T07:14:04.000Z" itemprop="datePublished">
+          2016-12-06
       </time>
     
 </span>
-                <h1>React-native的IDE配置</h1>
+                <h1>Tunesgo 软件分解</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<blockquote>
-<p>推荐以下几款工具:sublime,webstorm以及官网推荐的Nuclide</p>
-</blockquote>
+      		<p>#Tunes go mac端管理手机的应用</p>
 <ul>
-<li><p><a href="https://github.com/facebook/nuclide" target="_blank" rel="external">IDE-Nuclide</a></p>
+<li><p>当应用启动时不仅会启动Tuhes go ，还会启动一个服务 <code>Wondershare TunesGo Helper</code> （提示设备连接）, 目录是 <code>/Users/dengbb/Library/Application Support/Wondershare TunesGo</code></p>
 <ul>
-<li>Nuclide是Atom的基础上面提供了一系列的插件集合,先装Atom</li>
-<li><a href="https://atom.io/" target="_blank" rel="external">atom</a></li>
+<li><code>Wondershare TunesGo Helper.app</code>   </li>
+<li>该目录下还有 <code>MediaLibrary.sqlitedb</code> ,<code>Photos.sqlite</code>文件</li>
+<li><code>adb</code>  <code>aatp</code> 文件</li>
+<li><code>Device.plist</code>文件 存储 连接设备历史 IPhone：40位 安卓16位</li>
+<li><code>DeviceInfo.mapping</code> ?</li>
 </ul>
 </li>
-<li><p><a href="http://www.sublimetext.com/" target="_blank" rel="external"> sublimeText</a></p>
+<li><p>如果主程序正在运行，那么helper服务不会提示通知</p>
 </li>
-<li><p><a href="https://www.jetbrains.com/webstorm/" target="_blank" rel="external">webstorm</a></p>
-<p><a href="http://www.lcode.org/%E3%80%90react-native%E5%BC%80%E5%8F%91%E3%80%91react-native%E5%BC%80%E5%8F%91ide%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/" target="_blank" rel="external">参考文章</a> </p>
+<li>新的设备连接 会在主程序提示pop</li>
+<li>安卓设备连接是会如果没打开 <code>Alows usb debuging</code>,则会提示 重试</li>
+<li>连接设备会有 进度条 显示<code>连接设备中</code></li>
+<li>连接设备时会提示在安卓手机安装一个看不见的应用</li>
+<li>功能<ul>
+<li>设备图片备份到mac</li>
+<li>两台设备交换信息</li>
+<li>设备存储容量显示</li>
+<li>一键root</li>
+</ul>
+</li>
+</ul>
+<h2 id="Android-文件传输"><a href="#Android-文件传输" class="headerlink" title="Android 文件传输"></a>Android 文件传输</h2><ul>
+<li>brakpad 即 开源的多平台崩溃上报系统 <a href="https://code.google.com/p/google-breakpad/" target="_blank" rel="external">address</a><ul>
+<li><a href="http://blog.csdn.net/wpc320/article/details/8449952" target="_blank" rel="external">mac平台crash 捕获</a></li>
+<li><a href="https://chromium.googlesource.com/breakpad/breakpad/+/master/docs/mac_breakpad_starter_guide.md" target="_blank" rel="external">How To Add Breakpad To Your Mac Client Application</a></li>
+<li>通过mtp实现文件传输 <a href="https://wiki.archlinux.org/index.php/MTP_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="external">mtp简介</a>)</li>
+<li>安装mtp命令 brew install libmtp</li>
+</ul>
+</li>
+</ul>
+<h2 id="handershake"><a href="#handershake" class="headerlink" title="handershake"></a>handershake</h2><ul>
+<li>手机必须安装 <code>HandShaker 传输服务</code> 否则mac 软件无法识别；</li>
+<li>并且连接电脑时有 默认情况下使用该usb 配件</li>
+<li>手机锁屏 会立即提示</li>
+<li><a href="https://github.com/stevestreza/XPCKit" target="_blank" rel="external">XPCKit</a><ul>
+<li><a href="http://www.cocoachina.com/bbs/read.php?tid=110294" target="_blank" rel="external">关于mac app在sandbox下运行时的XPC Service</a></li>
+</ul>
 </li>
 </ul>
 
@@ -280,19 +307,19 @@
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/11/30/javascript-高级/" style="float: left;">
-        ← javascript 高级
+    <a class="pull-left" href="/2016/12/07/java迷你服务器NanoHTTPD/" style="float: left;">
+        ← java迷你服务器NanoHTTPD
     </a>
     
     
-    <a class="pull-right" href="/2016/11/29/React-naive学习资料/">
-        React-naive学习资料 →
+    <a class="pull-right" href="/2016/12/06/Tunesgo-软件分解/">
+        Tunesgo 软件分解 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/11/29/React-native的IDE配置/" data-title="React-native的IDE配置" data-url="http://yoursite.com/2016/11/29/React-native的IDE配置/"></div>
+<div class="ds-thread" data-thread-key="2016/12/06/JAVA/我是分类/" data-title="Tunesgo 软件分解" data-url="http://yoursite.com/2016/12/06/JAVA/我是分类/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {

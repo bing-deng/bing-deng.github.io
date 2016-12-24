@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>React-native的IDE配置 | dengbb的技术博客</title>
+  <title>C++语言基础 | dengbb的技术博客</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -249,30 +249,61 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-11-29T06:46:34.000Z" itemprop="datePublished">
-          2016-11-29
+      <time datetime="2016-12-22T07:27:37.000Z" itemprop="datePublished">
+          2016-12-22
       </time>
     
 </span>
-                <h1>React-native的IDE配置</h1>
+                <h1>C++语言基础</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<blockquote>
-<p>推荐以下几款工具:sublime,webstorm以及官网推荐的Nuclide</p>
-</blockquote>
+      		<p>##C++ 语言基础</p>
 <ul>
-<li><p><a href="https://github.com/facebook/nuclide" target="_blank" rel="external">IDE-Nuclide</a></p>
-<ul>
-<li>Nuclide是Atom的基础上面提供了一系列的插件集合,先装Atom</li>
-<li><a href="https://atom.io/" target="_blank" rel="external">atom</a></li>
+<li><p>输出语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#include &lt;iostream&gt;</div><div class="line"></div><div class="line">using namespace std;// 告诉编译器使用 std 命名空间。命名空间是 C++ 中一个相对新的概念</div><div class="line">int main(int argc, char *argv[]) &#123;</div><div class="line">    cout &lt;&lt; &quot;hello world&quot;; // 输出语句</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>终端运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 终端运行</div><div class="line">  //$ g++ hello.cpp</div><div class="line">  //$ ./a.out</div><div class="line">  //Hello World</div></pre></td></tr></table></figure>
+</li>
+<li><p>基本数据类型 <code>char</code> <code>int</code>  <code>float</code>     <code>double</code> <code>wchar_t</code></p>
+</li>
+<li>一些基本类型可以使用一个或多个类型修饰符进行修饰：<code>signed</code> <code>unsigned</code> <code>short</code> <code>long</code></li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">#include &lt;iostream&gt;</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">int main(int argc, char *argv[]) &#123;</div><div class="line"></div><div class="line">    cout &lt;&lt;endl;    //自动换行</div><div class="line">    cout &lt;&lt; &quot;Size of char : &quot; &lt;&lt; sizeof(char) &lt;&lt; endl;</div><div class="line">    cout &lt;&lt; &quot;Size of int : &quot; &lt;&lt; sizeof(int) &lt;&lt; endl;</div><div class="line">    cout &lt;&lt; &quot;Size of short int : &quot; &lt;&lt; sizeof(short int) &lt;&lt; endl;</div><div class="line">    cout &lt;&lt; &quot;Size of long int : &quot; &lt;&lt; sizeof(long int) &lt;&lt; endl;</div><div class="line">    cout &lt;&lt; &quot;Size of float : &quot; &lt;&lt; sizeof(float) &lt;&lt; endl;</div><div class="line">    cout &lt;&lt; &quot;Size of double : &quot; &lt;&lt; sizeof(double) &lt;&lt; endl;</div><div class="line">    cout &lt;&lt; &quot;Size of wchar_t : &quot; &lt;&lt; sizeof(wchar_t) &lt;&lt; endl;</div><div class="line">    return 0;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Size of char : 1</div><div class="line">Size of int : 4</div><div class="line">Size of short int : 2</div><div class="line">Size of long int : 8</div><div class="line">Size of float : 4</div><div class="line">Size of double : 8</div><div class="line">Size of wchar_t : 4</div></pre></td></tr></table></figure>
+<ul>
+<li><p>typedef 声明<br>您可以使用 typedef 为一个已有的类型取一个新的名字。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#include &lt;iostream&gt;</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">typedef int iii; // 给int 类型起个别名</div><div class="line">int main(int argc, char *argv[]) &#123;</div><div class="line"></div><div class="line">    iii age = 28;</div><div class="line">    cout&lt;&lt; age;</div><div class="line">    </div><div class="line">    return 0;</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p><a href="http://www.sublimetext.com/" target="_blank" rel="external"> sublimeText</a></p>
+<li><p>枚举:枚举类型(enumeration)是C++中的一种派生数据类型，它是由用户定义的若干枚举常量的集合。</p>
 </li>
-<li><p><a href="https://www.jetbrains.com/webstorm/" target="_blank" rel="external">webstorm</a></p>
-<p><a href="http://www.lcode.org/%E3%80%90react-native%E5%BC%80%E5%8F%91%E3%80%91react-native%E5%BC%80%E5%8F%91ide%E5%AE%89%E8%A3%85%E5%8F%8A%E9%85%8D%E7%BD%AE/" target="_blank" rel="external">参考文章</a> </p>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">#include &lt;iostream&gt;</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">enum color&#123;</div><div class="line">    red,</div><div class="line">    green,</div><div class="line">    black</div><div class="line">&#125;c;</div><div class="line">int main(int argc, char *argv[]) &#123;</div><div class="line"></div><div class="line">    c = black;</div><div class="line">    cout&lt;&lt;c; // 输出2</div><div class="line">    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>使用 <strong>const</strong> 前缀声明指定类型的常量，如下所示： </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">#include &lt;iostream&gt;</div><div class="line"></div><div class="line">using namespace std;</div><div class="line">int main(int argc, char *argv[]) &#123;</div><div class="line"></div><div class="line">    const int LENGTH = 10;// 常量</div><div class="line">    cout&lt;&lt; LENGTH;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h4><ul>
+<li>指针：指针是一个变量，其值为另一个变量的地址；</li>
+<li><p>不同数据类型的指针之间唯一的不同是，指针所指向的变量或常量的数据类型不同。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">int    *ip;    /* 一个整型的指针 */</div><div class="line">double *dp;    /* 一个 double 型的指针 */</div><div class="line">float  *fp;    /* 一个浮点型的指针 */</div><div class="line">char   *ch     /* 一个字符型的指针 */</div></pre></td></tr></table></figure>
 </li>
+<li><p>C++ 支持空指针</p>
+</li>
+<li>C++ 允许指向指针的指针。</li>
+</ul>
+<h4 id="C-引用"><a href="#C-引用" class="headerlink" title="C++ 引用"></a>C++ 引用</h4><ul>
+<li>&amp; 读作引用</li>
+<li>不存在空引用。引用必须连接到一块合法的内存。</li>
+<li>一旦引用被初始化为一个对象，就不能被指向到另一个对象。</li>
+<li>指针可以在任何时候指向到另一个对象。</li>
+<li><p>引用必须在创建时被初始化。指针可以在任何时间被初始化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 声明简单的变量</div><div class="line">int    i;</div><div class="line">double d;</div><div class="line"> </div><div class="line">// 声明引用变量</div><div class="line">int&amp;    r = i;</div><div class="line">double&amp; s = d;// &quot;s 是一个初始化为 d 的 double 型引用&quot;</div></pre></td></tr></table></figure>
+</li>
+<li><p>把引用作为参数</p>
+</li>
+<li>把引用作为返回值</li>
 </ul>
 
             <div class="clearfix"></div>
@@ -280,19 +311,15 @@
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/11/30/javascript-高级/" style="float: left;">
-        ← javascript 高级
-    </a>
     
-    
-    <a class="pull-right" href="/2016/11/29/React-naive学习资料/">
-        React-naive学习资料 →
+    <a class="pull-right" href="/2016/12/21/iOS编码规范/">
+        iOS编码规范 →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/11/29/React-native的IDE配置/" data-title="React-native的IDE配置" data-url="http://yoursite.com/2016/11/29/React-native的IDE配置/"></div>
+<div class="ds-thread" data-thread-key="2016/12/22/C++语言基础/" data-title="C++语言基础" data-url="http://yoursite.com/2016/12/22/C++语言基础/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"duoshuo_name"};
 (function() {

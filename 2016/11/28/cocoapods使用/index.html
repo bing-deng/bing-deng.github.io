@@ -104,7 +104,19 @@
                 <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
                 <ul class="sb-submenu">
                     
-                        <li><a href="/" target="_BLANK" class="animsition-link">catgroy</a></li>
+                        <li><a href="/JAVA" target="_BLANK" class="animsition-link">JAVA</a></li>
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">DB</a></li>
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">Android</a></li>
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">NodeJS</a></li>
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">MacOS</a></li>
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">IOS</a></li>
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">Linux</a></li>
                     
                         <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
                     
@@ -153,6 +165,14 @@
                     
                     <li><a href="https://github.com/it-ebooks/it-ebooks-archive" class="animsition-link">计算机开发电子书大全</a></li>
                     
+                    <li><a href="https://segmentfault.com/" class="animsition-link">segmentfault</a></li>
+                    
+                    <li><a href="http://www.csdn.net/?ref=toolbar" class="animsition-link">csdn</a></li>
+                    
+                    <li><a href="http://www.cocoachina.com/" class="animsition-link">cocoachina</a></li>
+                    
+                    <li><a href="https://www.raywenderlich.com/" class="animsition-link">raywenderlich</a></li>
+                    
                 </ul>
             </li>
             
@@ -189,13 +209,13 @@
                             <li><a href="/" class="animsition-link">dengbb的技术博客</a></li>
                             <li class="nolink"><span>Always </span>Creative.</li>
                             
-                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            <li><a href="https://github.com/bing-deng" title="Github" target="_blank"><i class="icon-github"></i></a></li>
                             
                             
-                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            <li><a href="https://twitter.com/dengbingbing198" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
                             
                             
-                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100007357574233" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
                             
                             
                             <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
@@ -242,8 +262,13 @@
 <p>###创建podfile 文件时 官网推荐<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div><div class="line"></div><div class="line">target &apos;MyApp&apos; do</div><div class="line">  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;</div><div class="line">  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;</div><div class="line">end</div></pre></td></tr></table></figure></p>
 <p>否则会报错<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">The dependency `FMDB (~&gt; 2.3)` is not used in any concrete target.</div></pre></td></tr></table></figure></p>
 <p>###或者另外一种写法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div><div class="line"></div><div class="line">def pods</div><div class="line">  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;</div><div class="line">  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;</div><div class="line">  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;</div><div class="line">end</div><div class="line">target &apos;MyApp&apos; do</div><div class="line">  pods</div><div class="line">end</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">platform :ios, &apos;8.0&apos;</div><div class="line">#use_frameworks!个别需要用到它，比如reactiveCocoa</div></pre></td></tr></table></figure>
+<p>def pods<br>  pod ‘AFNetworking’, ‘~&gt; 2.6’<br>  pod ‘ORStackView’, ‘~&gt; 3.0’<br>  pod ‘SwiftyJSON’, ‘~&gt; 2.3’<br>end<br>target ‘MyApp’ do<br>  pods<br>end<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"># swift3.0 升级 cocoapods</div><div class="line"></div><div class="line">* Alamofire 报错</div><div class="line">    *  [cocoapods 更新到1.20 才可使用swift 3.0](http://blog.csdn.net/qxuewei/article/details/53113920)</div><div class="line">    *   Terminal执行 `pod deintegrate &amp;&amp; pod _1.1.1_ install`</div></pre></td></tr></table></figure></p>
+<p>$ ruby -v<br>$ curl -L get.rvm.io | bash -s stable #rvm 安装<br>$ source ~/.bashrc<br>$ source ~/.bash_profile<br>$ rvm install 2.2.4<br>$ ruby -v<br>$ gem source -a <a href="https://gems.ruby-china.org" target="_blank" rel="external">https://gems.ruby-china.org</a> #切换ruby 源<br>$sudo gem install -n /usr/local/bin cocoapods –pre<br>$ pod –version<br>$pod setup<br>$pod install –no-repo-update<br>```</p>
+<pre><code>## 如果以上报错参考下文
 
+   [解决cocoapods升级报错问题](http://www.jianshu.com/p/e2806f9d9e6f)
+</code></pre>
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
@@ -292,13 +317,13 @@ var duoshuoQuery = {short_name:"duoshuo_name"};
             <div class="social">
                 <ul>
                     
-                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    <li><a href="https://github.com/bing-deng" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    <li><a href="https://twitter.com/dengbingbing198" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
                     
                     
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100007357574233" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
                     
                     
                     <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
